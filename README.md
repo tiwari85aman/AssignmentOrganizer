@@ -4,7 +4,7 @@
 
 ## How To Run
 
-Use Pycharm or IDLE (Python > 3) & Run file “GUI.py”.
+Use Pycharm or IDLE (Python > 3 with tkinter installed) & Run file “GUI.py”.
 
 
 ## Special Features:
@@ -22,8 +22,9 @@ Use Pycharm or IDLE (Python > 3) & Run file “GUI.py”.
 
 There were various methods of finding 10 biggest files on system but for obvious reasons we want to reduce the time delay as it will already take time for traversing all directories and files. Thus, I used “Min Heap” as Data Structure with capacity of 10. Every time a file is chosen, its size is compared with the minimum size in Heap, if min(heap) < current file size then replaces the minimum value with current file size. Similarly, the heap property is maintained and at the end of full system traversal we get only the top 10 largest values and all the small size values are popped out.
 Exception Handling has been taken care of for system files that are read only protected in case the script is not run as administrator. 
-
-Time Complexity: O(Log(N))
+This process will take some time depending upon the processor (As Full system Scan is in process)
+windows 10 takes less time than linux (because linux have highly scattered small size system files in root directory)
+Time Complexity: **O(Log(N))**
 ![System Scan](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/d.PNG)
 
 ![Results](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/2.png)
