@@ -1,10 +1,7 @@
-
 import tkinter as tk
 import fileHandler as fh
 import systemScan as sc
 
-#author: aman tiwari
-#contact: 8428941096, tiwari.aman85@gmail.com, aman.tiwari2015@vit.ac.in
 
 root = tk.Tk()
 root.geometry("270x300")
@@ -43,31 +40,38 @@ frame.place(relx=.5, rely=.5, anchor="c")
 frame.pack_propagate(0)
 
 everything = tk.Button(frame,
-                   text="Organize Everything",
-                   command=lambda : fh.organiseDesktop(everything,byDate,undoButton),
+                   text="Organize in same location (Undo allowed)",
+                   command=lambda : fh.organiseDesktop(everything,everythingInDocument,byDate,undoButton),
                    padx=20,
-                    width=25
+                    width=29
                    )
 
 everything.grid(row=1, column=1)
 
+everythingInDocument = tk.Button(frame,
+                   text="Organize in Documents",
+                   command=lambda : fh.organiseDesktopInDocuments(everything,everythingInDocument,byDate,undoButton),
+                   padx=20,
+                    width=29
+                   )
 
+everythingInDocument.grid(row=2, column=1)
 
 byDate = tk.Button(frame,
-                   text="Organize By Date Modified (Pictures)",
+                   text="Organize By Date (Undo allowed)",
                    command=lambda : fh.organiseDesktopByDate(everything,byDate,undoButton),
                    padx=20,
-                    width=25
+                    width=29
                    )
-byDate.grid(row=2, column=1)
+byDate.grid(row=3, column=1)
 
 undoButton = tk.Button(frame,
                    text="Undo Changes",
-                   command=lambda : fh.undoChanges(undoButton,everything,byDate),
+                   command=lambda : fh.undoChanges(undoButton,everything,everythingInDocument,byDate),
                    padx=20,
-                    width=25,
+                    width=29,
                    )
-undoButton.grid(row=3, column=1)
+undoButton.grid(row=4, column=1)
 undoButton.config(state="disabled")
 
 
@@ -75,22 +79,18 @@ systemScanButton = tk.Button(frame,
                    text="System Scan",
                    command=lambda : sc.walkThroughSystem(),
                    padx=20,
-                    width=25,
+                    width=29,
                    )
-systemScanButton.grid(row=4, column=1)
+systemScanButton.grid(row=5, column=1)
 
 quit = tk.Button(frame,
                    text="QUIT",
                    fg="red",
                    command=quit,
                    padx=20,
-                 width=25)
-quit.grid(row=5, column=1)
+                 width=29)
+quit.grid(row=6, column=1)
 
 
 
 root.mainloop()
-#author: aman tiwari
-#contact: 8428941096, tiwari.aman85@gmail.com, aman.tiwari2015@vit.ac.in
-
-

@@ -1,16 +1,16 @@
-#author: aman tiwari
-#contact: 8428941096, tiwari.aman85@gmail.com, aman.tiwari2015@vit.ac.in
-
-
 import os,datetime,shutil
 import platform
 from tkinter import filedialog
+from os.path import expanduser
+
 
 directory="NULL"
+home = expanduser("~")
+
 if(platform.system()=='Windows'):
-    directory = os.path.abspath('C://Users//Aman Tiwari//Desktop//')
+    directory = os.path.abspath(home+'\\Desktop\\')
 else:
-    directory = os.path.abspath('//home//aman//Desktop//')
+    directory = os.path.abspath(home+'/Desktop/')
 
 def setChoice(choice):
     global directory
@@ -37,20 +37,27 @@ def movFileToFolder(filename,folder,source,directorySeparator):
     if not os.path.exists(folder):
         os.makedirs(folder)
     destination=folder+directorySeparator+filename
-    
+    print(destination)
     os.rename(source,destination)
 
+inDocument=0
+def organiseDesktopInDocuments(everythingButton,everythingInDocumentButton,byDateButton,undoButton):
+    global inDocument
+    inDocument=1
+    organiseDesktop(everythingButton,everythingInDocumentButton,byDateButton,undoButton)
+
 #Organize Desktop Based on Extension Names
-def organiseDesktop(everythingButton,byDateButton,undoButton):
+def organiseDesktop(everythingButton,everythingInDocumentButton,byDateButton,undoButton):
     print(directory)
     # Disable the Buttons Pressed In GUI
+    everythingInDocumentButton.config(state='disabled')
     everythingButton.config(state='disabled')
     byDateButton.config(state='disabled')
-    # Enable the Undo Button
-    undoButton.config(state='normal')
+
 
     #save the current State of the directory to use this info if in case UNDO is required
     global prevState
+    global inDocument
     prevState=currentState()
 
     #iterate through each file in the current directory
@@ -63,14 +70,24 @@ def organiseDesktop(everythingButton,byDateButton,undoButton):
             if(platform.system()=='Windows'):
                 directorySeparator='\\'
             else:
-                directorySeparator='//'
+                directorySeparator='/'
 
             #Exclude shortcut icons in the given directory
+            if(inDocument==1):
+                if(platform.system()=='Windows'):
+                    finalDirectory=home+"\\Documents"
+                else:
+                    finalDirectory=home+"/Documents"
+            else:
+                finalDirectory=directory
+                # Enable the Undo Button
+                undoButton.config(state='normal')
+
             if(currFileExt!='lnk'):
                 if(currFileExt==''):
-                    assignedFolder=directory+directorySeparator+'File(Misc)'
+                    assignedFolder=finalDirectory+directorySeparator+'File(Misc)'
                 else:
-                    assignedFolder=directory+directorySeparator+currFileExt
+                    assignedFolder=finalDirectory+directorySeparator+currFileExt
                 movFileToFolder(filename,assignedFolder,fileSource,directorySeparator)
                 #print (fileSource)
             
@@ -87,6 +104,7 @@ def organiseDesktopByDate(everythingButton,byDateButton,undoButton):
     #saving current state
     global prevState
     prevState = currentState()
+    print(prevState)
     #organize by Date Modified
     for filename in os.listdir(directory):
             fileSource=os.path.join(directory,filename)
@@ -96,7 +114,7 @@ def organiseDesktopByDate(everythingButton,byDateButton,undoButton):
             if(platform.system()=='Windows'):
                 directorySeparator='\\'
             else:
-                directorySeparator='//'
+                directorySeparator='/'
                 
             if(currFileExt!='lnk'):
                 date = datetime.datetime.fromtimestamp(os.path.getmtime(fileSource))
@@ -108,30 +126,32 @@ def organiseDesktopByDate(everythingButton,byDateButton,undoButton):
 #Fetch current State of the Directory
 def currentState():
     files={}
+    print(directory)
     for root, directories, filenames in os.walk(directory):
         for filename in filenames:
             fileSource=os.path.join(root,filename)
+            if(os.path.isdir(fileSource)):
+                continue
             files[filename]=fileSource
     return (files)
 
 #Undo Changes Made by the program by using the track record(Or History).
-def undoChanges(undoButton,everythingButton,byDateButton):
+def undoChanges(undoButton,everythingButton,everythingInDocumentButton,byDateButton):
     #Disable the Undo Button Pressed In GUI
     undoButton.config(state='disabled')
     # Enable the other two Button In GUI
+    everythingInDocumentButton.config(state='normal')
     everythingButton.config(state='normal')
     byDateButton.config(state='normal')
 
+ 
     newState=currentState()
+    print(newState)
     for key, prevLocation in prevState.items():
+        print(newState[key])
         os.rename(newState[key],prevLocation)
     global folderCreated
     #delete all newly created folder
     for key in folderCreated.keys():
         shutil.rmtree(key)
     folderCreated={}
-
-#author: aman tiwari
-#contact: 8428941096, tiwari.aman85@gmail.com, aman.tiwari2015@vit.ac.in
-
-
