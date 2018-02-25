@@ -21,25 +21,27 @@ Use Pycharm or IDLE (Python > 3) & Run file “GUI.py”.
 ## •	Finding Top 10 System Files - 
 
 There were various methods of finding 10 biggest files on system but for obvious reasons we want to reduce the time delay as it will already take time for traversing all directories and files. Thus, I used “Min Heap” as Data Structure with capacity of 10. Every time a file is chosen, its size is compared with the minimum size in Heap, if min(heap) < current file size then replaces the minimum value with current file size. Similarly, the heap property is maintained and at the end of full system traversal we get only the top 10 largest values and all the small size values are popped out.
-Time Complexity: **O(Log(N))**
 Exception Handling has been taken care of for system files that are read only protected in case the script is not run as administrator. 
 
-
-
-
-![System Scan](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/1.png)
+Time Complexity: O(Log(N))
+![System Scan](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/d.PNG)
 
 ![Results](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/2.png)
-## •	Organize Desktop chunk of Files (Excluding Special Files)-
+## •	Organize Desktop chunk of Files On Same Location (Excluding Special Files)-
 
 For chunk of files placed on Desktop, the given script organize them in respective folders based on their extensions, however the files like shortcut icons should not be touched.
 Also, there are some file that doesn’t have any extension and are considered as “File” type, similarly such files are grouped together and organized in a “Misc” folder.
-![Unorganized Desktop](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/3.png)
-![Organized Desktop](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/4.png)
+![Unorganized Desktop](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/g.JPG)
+![Organized Desktop](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/h.JPG)
+## •	Organize Desktop chunk of Files In Documents (Excluding Special Files)-
+This feature doesn't allow UNDO feature, while the organizing property remains same and the files are moved to "Documents" folder
+![enter image description here](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/desktop.PNG)
+![enter image description here](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/documents.PNG)
 ## •	Organize any Given Custom Directory –
 
 This Features works as previous one but with an option of organizing any custom directory instead of desktop only.
-
+![enter image description here](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/a.PNG)
+![enter image description here](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/b.PNG)
 ## •	Organize Pictures/Images with Date Modified for Easier Access –
 
 We all know that images or pictures in the system or not well organized they have some defined file name like “DSC-0001” etc. we find it difficult when we want to search or access a particular picture we want in a directory full of thousands of images.
@@ -48,7 +50,7 @@ My proposed idea is to organize the whole directory with “Date Created Or Date
 **NOTE:**  This feature also works with all file types. Not necessarily for only Images. Only because the such organizing mechanism helps in case of pictures, I have given it name of Organize Pictures.
 
 ![Images Folder](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/5.png)
-![Custom Directory Selection](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/6.png)
+
 ![With Date Modified Organize](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/7.png)
 ## •	Undo Feature
 
@@ -67,4 +69,4 @@ A simple GUI has been built on top of the backend for ease of the naïve user. U
 •	Radio Button to choose between “Desktop” or “Custom” directory.
 •	When any one option between “organize everything” & “organize by date modified” is selected the other one will be disabled, (obviously) other will be of no use now. However, both can be enabled back if “Undo” is clicked.
 
-![Undo Disabled](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/12.png)![Organize option Disabled](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/11.png)
+![Undo Disabled](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/d.PNG)![Organize option Disabled](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/f.JPG)
