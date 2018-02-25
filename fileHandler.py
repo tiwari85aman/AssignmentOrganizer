@@ -1,3 +1,7 @@
+#author: aman tiwari
+#contact: 8428941096, tiwari.aman85@gmail.com
+
+
 import os,datetime,shutil
 import platform
 from tkinter import filedialog
@@ -126,3 +130,8 @@ def undoChanges(undoButton,everythingButton,byDateButton):
     for key in folderCreated.keys():
         shutil.rmtree(key)
     folderCreated={}
+
+#author: aman tiwari
+#contact: 8428941096, tiwari.aman85@gmail.com
+
+

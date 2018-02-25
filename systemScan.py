@@ -1,3 +1,7 @@
+#author: aman tiwari
+#contact: 8428941096, tiwari.aman85@gmail.com
+
+
 import os,platform
 import subprocess
 from heapq import *
@@ -50,4 +54,7 @@ def walkThroughSystem():
     for i in range(10):
         print(heappop(n),end="  ")
         print(str(heappop(h))+" MB")
+#author: aman tiwari
+#contact: 8428941096, tiwari.aman85@gmail.com
+
 

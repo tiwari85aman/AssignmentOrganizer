@@ -1,9 +1,10 @@
+
 import tkinter as tk
 import fileHandler as fh
 import systemScan as sc
 
-
-
+#author: aman tiwari
+#contact: 8428941096, tiwari.aman85@gmail.com
 
 root = tk.Tk()
 root.geometry("270x300")
@@ -89,3 +90,7 @@ quit.grid(row=5, column=1)
 
 
 root.mainloop()
+#author: aman tiwari
+#contact: 8428941096, tiwari.aman85@gmail.com
+
+
