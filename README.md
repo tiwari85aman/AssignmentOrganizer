@@ -27,16 +27,19 @@ Time Complexity: O(Log(N))
 ![System Scan](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/d.PNG)
 
 ![Results](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/2.png)
+
+## •	Organize Desktop chunk of Files In Documents (Excluding Special Files)-
+This feature doesn't allow UNDO feature, while the organizing property remains same and the files are moved to "Documents" folder
+![enter image description here](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/desktop.PNG)
+![enter image description here](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/documents.PNG)
+
 ## •	Organize Desktop chunk of Files On Same Location (Excluding Special Files)-
 
 For chunk of files placed on Desktop, the given script organize them in respective folders based on their extensions, however the files like shortcut icons should not be touched.
 Also, there are some file that doesn’t have any extension and are considered as “File” type, similarly such files are grouped together and organized in a “Misc” folder.
 ![Unorganized Desktop](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/g.JPG)
 ![Organized Desktop](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/h.JPG)
-## •	Organize Desktop chunk of Files In Documents (Excluding Special Files)-
-This feature doesn't allow UNDO feature, while the organizing property remains same and the files are moved to "Documents" folder
-![enter image description here](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/desktop.PNG)
-![enter image description here](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/documents.PNG)
+
 ## •	Organize any Given Custom Directory –
 
 This Features works as previous one but with an option of organizing any custom directory instead of desktop only.
