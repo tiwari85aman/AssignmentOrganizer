@@ -4,7 +4,7 @@ import fileHandler as fh
 import systemScan as sc
 
 #author: aman tiwari
-#contact: 8428941096, tiwari.aman85@gmail.com
+#contact: 8428941096, tiwari.aman85@gmail.com, aman.tiwari2015@vit.ac.in
 
 root = tk.Tk()
 root.geometry("270x300")
@@ -91,6 +91,6 @@ quit.grid(row=5, column=1)
 
 root.mainloop()
 #author: aman tiwari
-#contact: 8428941096, tiwari.aman85@gmail.com
+#contact: 8428941096, tiwari.aman85@gmail.com, aman.tiwari2015@vit.ac.in
 
 

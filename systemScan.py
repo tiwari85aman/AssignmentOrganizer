@@ -1,5 +1,5 @@
 #author: aman tiwari
-#contact: 8428941096, tiwari.aman85@gmail.com
+#contact: 8428941096, tiwari.aman85@gmail.com, aman.tiwari2015@vit.ac.in
 
 
 import os,platform
@@ -55,6 +55,6 @@ def walkThroughSystem():
         print(heappop(n),end="  ")
         print(str(heappop(h))+" MB")
 #author: aman tiwari
-#contact: 8428941096, tiwari.aman85@gmail.com
+#contact: 8428941096, tiwari.aman85@gmail.com, aman.tiwari2015@vit.ac.in
 
 
