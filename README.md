@@ -40,6 +40,7 @@ This feature doesn't allow UNDO feature, while the organizing property remains s
 ## •	Organize any Given Custom Directory –
 
 This Features works as previous one but with an option of organizing any custom directory instead of desktop only.
+![enter image description here](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/customM.JPG)
 ![enter image description here](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/a.PNG)
 ![enter image description here](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/b.PNG)
 ## •	Organize Pictures/Images with Date Modified for Easier Access –
