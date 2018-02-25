@@ -21,9 +21,12 @@ Use Pycharm or IDLE (Python > 3) & Run file “GUI.py”.
 ## •	Finding Top 10 System Files - 
 
 There were various methods of finding 10 biggest files on system but for obvious reasons we want to reduce the time delay as it will already take time for traversing all directories and files. Thus, I used “Min Heap” as Data Structure with capacity of 10. Every time a file is chosen, its size is compared with the minimum size in Heap, if min(heap) < current file size then replaces the minimum value with current file size. Similarly, the heap property is maintained and at the end of full system traversal we get only the top 10 largest values and all the small size values are popped out.
+Time Complexity: **O(Log(N))**
 Exception Handling has been taken care of for system files that are read only protected in case the script is not run as administrator. 
 
-Time Complexity: O(Log(N))
+
+
+
 ![System Scan](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/1.png)
 
 ![Results](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/2.png)
