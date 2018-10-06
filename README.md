@@ -25,6 +25,7 @@ Exception Handling has been taken care of for system files that are read only pr
 This process will take some time depending upon the processor (As Full system Scan is in process)
 windows 10 takes less time than linux (because linux have highly scattered small size system files in root directory)
 Time Complexity: **O(Log(N))**
+
 ![System Scan](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/d.PNG)
 
 ![Results](https://raw.githubusercontent.com/tiwari85aman/AssignmentOrganizer/master/Images/2.png)
